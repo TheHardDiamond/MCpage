@@ -76,7 +76,28 @@
     "date": "2025-12-05",
     "quote": "FxxkMorderntime Vol2 · Mord · 过度玩梗",
     "body": "服务器历史 · 小麦田 Vol4 · WhiteSuger",
-    "images": [],
+    "images": [
+      {
+        "src": "/chronicle-images/issue-35/3621683442-1.png",
+        "alt": "FxxkMorderntime Vol2 · 过度玩梗"
+      },
+      {
+        "src": "/chronicle-images/issue-35/3621686442-1.png",
+        "alt": "小麦田 Vol4"
+      },
+      {
+        "src": "/chronicle-images/issue-35/3621686442-2.png",
+        "alt": "小麦田 Vol4"
+      },
+      {
+        "src": "/chronicle-images/issue-35/3621686442-3.png",
+        "alt": "小麦田 Vol4"
+      },
+      {
+        "src": "/chronicle-images/issue-35/3621686442-4.png",
+        "alt": "小麦田 Vol4"
+      }
+    ],
     "sensitiveInfoProcessed": false
   },
   {
@@ -84,7 +105,32 @@
     "date": "2025-12-06",
     "quote": "服务器历史 · 小麦田 Vol5 · WhiteSuger",
     "body": "",
-    "images": [],
+    "images": [
+      {
+        "src": "/chronicle-images/issue-36/3621694522-1.png",
+        "alt": "小麦田 Vol5"
+      },
+      {
+        "src": "/chronicle-images/issue-36/3621694522-2.png",
+        "alt": "小麦田 Vol5"
+      },
+      {
+        "src": "/chronicle-images/issue-36/3621694522-3.png",
+        "alt": "小麦田 Vol5"
+      },
+      {
+        "src": "/chronicle-images/issue-36/3621694522-4.png",
+        "alt": "小麦田 Vol5"
+      },
+      {
+        "src": "/chronicle-images/issue-36/3621694522-5.png",
+        "alt": "小麦田 Vol5"
+      },
+      {
+        "src": "/chronicle-images/issue-36/3621694522-6.png",
+        "alt": "小麦田 Vol5"
+      }
+    ],
     "sensitiveInfoProcessed": false
   }
 ]
