@@ -35,6 +35,7 @@ def candidates(source, username, output):
                 "id": int(issue["number"]),
                 "date": stamp(comments[0].get("createdAt") or comments[0]["created_at"]).date().isoformat(),
                 "visibility": "待审",
+                "sensitiveInfoProcessed": False,
                 "quote": "",
                 "body": "\n\n".join(comment["body"] for comment in comments),
                 "images": [],
@@ -44,13 +45,18 @@ def candidates(source, username, output):
         raise FileExistsError("Choose a new candidate path to preserve previous review decisions")
     write(output, sorted(entries, key=lambda entry: entry["date"], reverse=True))
 
-def chronicle(source):
+def chronicle(source, processed_only=False):
     source = Path(source)
     public = []
     images = {}
     ids = set()
     for item in read(source):
         if item.get("visibility") != "公开":
+            continue
+        processed = item.get("sensitiveInfoProcessed", False)
+        if not isinstance(processed, bool):
+            raise ValueError("sensitiveInfoProcessed must be a boolean")
+        if processed_only and not processed:
             continue
         number = int(item["id"])
         if number <= 0 or number in ids or not item["quote"].strip():
@@ -59,6 +65,7 @@ def chronicle(source):
         published = {
             "id": number, "date": date.fromisoformat(item["date"]).isoformat(),
             "quote": item["quote"], "body": item["body"], "images": [],
+            "sensitiveInfoProcessed": processed,
         }
         for index, image in enumerate(item["images"], start=1):
             original = (source.parent / image["file"]).resolve()
@@ -159,11 +166,12 @@ if __name__ == "__main__":
     history.add_argument("output")
     for action in ("chronicle", "archive"):
         actions.add_parser(action).add_argument("source")
+    actions.choices["chronicle"].add_argument("--processed-only", action="store_true")
     args = parser.parse_args()
     if args.action == "candidates":
         candidates(args.source, args.username, args.output)
     elif args.action == "chronicle":
-        chronicle(args.source)
+        chronicle(args.source, args.processed_only)
     elif args.action == "upptime":
         upptime(args.repo, args.sources, args.output)
     else:
