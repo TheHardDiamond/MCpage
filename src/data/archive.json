@@ -1,1 +1,1536 @@
-{"cutoff":null,"services":[]}
+{
+  "cutoff": "2026-06-17T00:06:36.752Z",
+  "services": [
+    {
+      "id": "csu-mc-skin",
+      "name": "CSU-MC 皮肤站",
+      "days": {
+        "2026-06-17": {
+          "state": "ok",
+          "events": []
+        },
+        "2025-11-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #1",
+              "start": "2025-11-13T23:20:48Z",
+              "end": "2025-11-14T03:01:18Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #3",
+              "start": "2025-11-14T12:00:09Z",
+              "end": "2025-11-14T12:56:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #5",
+              "start": "2025-11-14T22:36:36Z",
+              "end": "2025-11-15T03:30:47Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #7",
+              "start": "2025-11-18T22:00:21Z",
+              "end": "2025-11-19T03:18:24Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #9",
+              "start": "2025-11-20T01:48:36Z",
+              "end": "2025-11-20T05:22:41Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-21": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #11",
+              "start": "2025-11-21T01:47:35Z",
+              "end": "2025-11-21T03:02:49Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-22": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #13",
+              "start": "2025-11-21T23:32:32Z",
+              "end": "2025-11-22T02:17:46Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-26": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #16",
+              "start": "2025-11-25T22:45:09Z",
+              "end": "2025-11-26T03:40:29Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-27": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #18",
+              "start": "2025-11-26T22:56:39Z",
+              "end": "2025-11-27T02:47:49Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-28": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #20",
+              "start": "2025-11-27T18:19:29Z",
+              "end": "2025-11-28T02:48:41Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-29": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #22",
+              "start": "2025-11-28T23:31:57Z",
+              "end": "2025-11-29T04:25:56Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-30": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #24",
+              "start": "2025-11-29T21:28:55Z",
+              "end": "2025-11-30T03:42:03Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #26",
+              "start": "2025-11-30T13:20:34Z",
+              "end": "2025-11-30T14:24:26Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-02": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #29",
+              "start": "2025-12-01T21:14:44Z",
+              "end": "2025-12-02T04:48:05Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-03": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #31",
+              "start": "2025-12-02T22:56:19Z",
+              "end": "2025-12-03T03:49:56Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-04": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #33",
+              "start": "2025-12-03T22:38:30Z",
+              "end": "2025-12-04T03:11:09Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-06": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #36",
+              "start": "2025-12-05T17:42:44Z",
+              "end": "2025-12-05T18:16:51Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-07": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #39",
+              "start": "2025-12-06T17:43:26Z",
+              "end": "2025-12-07T03:04:19Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-09": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #41",
+              "start": "2025-12-09T08:58:18Z",
+              "end": "2025-12-09T11:25:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #43",
+              "start": "2025-12-09T14:51:10Z",
+              "end": "2025-12-09T15:58:11Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-10": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #46",
+              "start": "2025-12-09T22:17:43Z",
+              "end": "2025-12-10T02:59:18Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-11": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #49",
+              "start": "2025-12-10T22:16:14Z",
+              "end": "2025-12-11T02:58:34Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-12": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #51",
+              "start": "2025-12-11T22:53:04Z",
+              "end": "2025-12-12T04:03:13Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-13": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #53",
+              "start": "2025-12-12T19:17:32Z",
+              "end": "2025-12-13T03:21:21Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #55",
+              "start": "2025-12-13T22:20:16Z",
+              "end": "2025-12-14T04:49:08Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #57",
+              "start": "2025-12-14T10:51:30Z",
+              "end": "2025-12-14T11:01:06Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #58",
+              "start": "2025-12-14T14:24:07Z",
+              "end": "2025-12-14T14:39:09Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #61",
+              "start": "2025-12-14T22:25:44Z",
+              "end": "2025-12-15T02:07:58Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-16": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #63",
+              "start": "2025-12-15T22:43:41Z",
+              "end": "2025-12-16T04:06:14Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-17": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #65",
+              "start": "2025-12-16T17:34:40Z",
+              "end": "2025-12-17T01:11:30Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-18": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #67",
+              "start": "2025-12-18T01:23:33Z",
+              "end": "2025-12-18T02:59:43Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #69",
+              "start": "2025-12-19T06:51:20Z",
+              "end": "2025-12-19T09:55:20Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #71",
+              "start": "2025-12-19T15:57:57Z",
+              "end": "2025-12-19T20:22:30Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #73",
+              "start": "2025-12-20T05:30:20Z",
+              "end": "2025-12-20T06:53:41Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #76",
+              "start": "2025-12-20T15:26:33Z",
+              "end": "2025-12-21T03:19:55Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-21": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #78",
+              "start": "2025-12-21T04:49:51Z",
+              "end": "2025-12-21T06:55:22Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #80",
+              "start": "2025-12-21T09:59:48Z",
+              "end": "2025-12-21T10:53:57Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #83",
+              "start": "2025-12-21T13:55:14Z",
+              "end": "2025-12-21T14:13:48Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #85",
+              "start": "2025-12-21T15:46:52Z",
+              "end": "2025-12-21T16:43:16Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-22": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #87",
+              "start": "2025-12-21T18:24:34Z",
+              "end": "2025-12-22T02:09:57Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-28": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #91",
+              "start": "2025-12-27T17:34:26Z",
+              "end": "2025-12-27T18:24:23Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #94",
+              "start": "2025-12-28T09:34:37Z",
+              "end": "2025-12-31T03:05:51Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-01": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #99",
+              "start": "2026-01-01T01:50:13Z",
+              "end": "2026-01-01T03:29:07Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-03": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #103",
+              "start": "2026-01-02T18:48:42Z",
+              "end": "2026-01-02T19:19:46Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #105",
+              "start": "2026-01-03T01:20:56Z",
+              "end": "2026-01-03T02:58:51Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-04": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #107",
+              "start": "2026-01-03T19:23:25Z",
+              "end": "2026-01-04T03:48:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-06": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #109",
+              "start": "2026-01-06T05:57:59Z",
+              "end": "2026-01-06T07:01:49Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-08": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #112",
+              "start": "2026-01-07T22:54:02Z",
+              "end": "2026-01-08T05:29:15Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-09": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #114",
+              "start": "2026-01-08T22:55:22Z",
+              "end": "2026-01-09T06:40:53Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-10": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #116",
+              "start": "2026-01-09T22:48:19Z",
+              "end": "2026-01-10T05:10:19Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #118",
+              "start": "2026-01-10T09:14:43Z",
+              "end": "2026-01-10T11:27:51Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #120",
+              "start": "2026-01-10T15:01:51Z",
+              "end": "2026-01-10T15:28:02Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-11": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #122",
+              "start": "2026-01-10T16:15:45Z",
+              "end": "2026-01-10T17:34:19Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #123",
+              "start": "2026-01-10T22:16:42Z",
+              "end": "2026-01-11T03:04:06Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-12": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #125",
+              "start": "2026-01-12T01:02:53Z",
+              "end": "2026-01-12T04:19:08Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-13": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #127",
+              "start": "2026-01-12T22:35:20Z",
+              "end": "2026-01-13T01:26:50Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #129",
+              "start": "2026-01-13T10:20:29Z",
+              "end": "2026-01-13T12:41:59Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #131",
+              "start": "2026-01-13T23:12:18Z",
+              "end": "2026-01-14T03:51:09Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #133",
+              "start": "2026-01-14T22:34:26Z",
+              "end": "2026-01-15T03:07:11Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-18": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #139",
+              "start": "2026-01-18T14:52:21Z",
+              "end": "2026-01-18T15:11:15Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #143",
+              "start": "2026-01-18T17:48:06Z",
+              "end": "2026-01-18T17:57:52Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #147",
+              "start": "2026-01-19T07:53:45Z",
+              "end": "2026-01-19T08:26:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #148",
+              "start": "2026-01-19T09:39:30Z",
+              "end": "2026-01-19T10:00:19Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #149",
+              "start": "2026-01-19T10:59:12Z",
+              "end": "2026-01-19T11:29:30Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #151",
+              "start": "2026-01-19T15:36:13Z",
+              "end": "2026-01-19T15:54:40Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #154",
+              "start": "2026-01-19T17:56:32Z",
+              "end": "2026-01-19T18:36:04Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #156",
+              "start": "2026-01-19T18:58:17Z",
+              "end": "2026-01-19T19:39:01Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #159",
+              "start": "2026-01-19T19:58:38Z",
+              "end": "2026-01-19T20:50:09Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #162",
+              "start": "2026-01-19T22:54:39Z",
+              "end": "2026-01-19T23:10:27Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #166",
+              "start": "2026-01-20T05:16:55Z",
+              "end": "2026-01-20T05:47:55Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #168",
+              "start": "2026-01-20T06:52:01Z",
+              "end": "2026-01-21T04:14:09Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-30": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #172",
+              "start": "2026-01-30T04:55:18Z",
+              "end": "2026-01-30T05:41:38Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-02-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #174",
+              "start": "2026-02-15T08:30:53Z",
+              "end": "2026-02-15T16:40:40Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-03-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #177",
+              "start": "2026-03-18T22:52:32Z",
+              "end": "2026-03-19T03:41:45Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-04-02": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #180",
+              "start": "2026-04-02T08:52:42Z",
+              "end": "2026-04-02T09:51:38Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-05-05": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #183",
+              "start": "2026-05-05T06:07:21Z",
+              "end": "2026-05-05T08:25:40Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "csu-mc-yggdrasil",
+      "name": "CSU-MC Yggdrasil",
+      "days": {
+        "2026-06-17": {
+          "state": "ok",
+          "events": []
+        },
+        "2025-11-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #2",
+              "start": "2025-11-13T23:22:20Z",
+              "end": "2025-11-14T03:01:21Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #4",
+              "start": "2025-11-14T12:00:11Z",
+              "end": "2025-11-14T12:56:04Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #6",
+              "start": "2025-11-14T22:38:08Z",
+              "end": "2025-11-15T03:30:50Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #8",
+              "start": "2025-11-18T22:01:52Z",
+              "end": "2025-11-19T03:18:26Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #10",
+              "start": "2025-11-20T01:50:08Z",
+              "end": "2025-11-20T05:22:44Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-21": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #12",
+              "start": "2025-11-21T01:49:07Z",
+              "end": "2025-11-21T03:02:52Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-22": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #14",
+              "start": "2025-11-21T23:34:04Z",
+              "end": "2025-11-22T02:17:49Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-25": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #15",
+              "start": "2025-11-24T16:46:24Z",
+              "end": "2025-11-25T01:24:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-26": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #17",
+              "start": "2025-11-25T22:46:40Z",
+              "end": "2025-11-26T03:40:32Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-27": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #19",
+              "start": "2025-11-26T22:58:11Z",
+              "end": "2025-11-27T02:47:52Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-28": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #21",
+              "start": "2025-11-27T18:21:00Z",
+              "end": "2025-11-28T02:48:44Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-29": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #23",
+              "start": "2025-11-28T23:33:29Z",
+              "end": "2025-11-29T04:25:59Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-11-30": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #25",
+              "start": "2025-11-29T21:30:27Z",
+              "end": "2025-11-30T03:42:06Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #27",
+              "start": "2025-11-30T13:22:06Z",
+              "end": "2025-11-30T14:24:28Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-02": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #30",
+              "start": "2025-12-01T21:16:16Z",
+              "end": "2025-12-02T04:48:07Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-03": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #32",
+              "start": "2025-12-02T22:57:50Z",
+              "end": "2025-12-03T03:49:59Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-04": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #34",
+              "start": "2025-12-03T22:40:03Z",
+              "end": "2025-12-04T03:11:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-05": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #35",
+              "start": "2025-12-05T14:26:42Z",
+              "end": "2025-12-05T14:45:07Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-06": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #37",
+              "start": "2025-12-05T17:42:46Z",
+              "end": "2025-12-05T18:16:53Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-07": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #40",
+              "start": "2025-12-06T17:44:57Z",
+              "end": "2025-12-07T03:04:22Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-09": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #42",
+              "start": "2025-12-09T08:59:49Z",
+              "end": "2025-12-09T11:25:14Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #44",
+              "start": "2025-12-09T14:52:42Z",
+              "end": "2025-12-09T15:58:15Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-10": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #47",
+              "start": "2025-12-09T22:19:15Z",
+              "end": "2025-12-10T02:59:21Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-11": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #50",
+              "start": "2025-12-10T22:17:46Z",
+              "end": "2025-12-11T02:58:37Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-12": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #52",
+              "start": "2025-12-11T22:54:37Z",
+              "end": "2025-12-12T04:03:15Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-13": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #54",
+              "start": "2025-12-12T19:19:04Z",
+              "end": "2025-12-13T03:21:23Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #56",
+              "start": "2025-12-13T22:21:48Z",
+              "end": "2025-12-14T04:49:10Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #59",
+              "start": "2025-12-14T14:25:38Z",
+              "end": "2025-12-14T14:39:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #62",
+              "start": "2025-12-14T22:27:16Z",
+              "end": "2025-12-15T02:08:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-16": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #64",
+              "start": "2025-12-15T22:45:12Z",
+              "end": "2025-12-16T04:06:17Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-17": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #66",
+              "start": "2025-12-16T17:36:12Z",
+              "end": "2025-12-17T01:11:33Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-18": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #68",
+              "start": "2025-12-18T01:25:05Z",
+              "end": "2025-12-18T02:59:46Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #70",
+              "start": "2025-12-19T06:52:52Z",
+              "end": "2025-12-19T10:43:52Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #72",
+              "start": "2025-12-19T15:59:28Z",
+              "end": "2025-12-20T03:58:02Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #74",
+              "start": "2025-12-20T05:31:51Z",
+              "end": "2025-12-20T06:53:44Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #77",
+              "start": "2025-12-20T15:28:04Z",
+              "end": "2025-12-21T03:19:57Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-21": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #79",
+              "start": "2025-12-21T04:51:22Z",
+              "end": "2025-12-21T06:55:25Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #81",
+              "start": "2025-12-21T10:01:19Z",
+              "end": "2025-12-21T11:12:42Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #82",
+              "start": "2025-12-21T12:55:02Z",
+              "end": "2025-12-21T13:26:04Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #84",
+              "start": "2025-12-21T13:56:45Z",
+              "end": "2025-12-21T14:34:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #86",
+              "start": "2025-12-21T15:48:24Z",
+              "end": "2025-12-21T16:43:20Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-22": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #88",
+              "start": "2025-12-21T18:26:05Z",
+              "end": "2025-12-22T02:10:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-26": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #90",
+              "start": "2025-12-26T06:41:16Z",
+              "end": "2025-12-26T08:46:18Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-28": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #92",
+              "start": "2025-12-27T17:35:57Z",
+              "end": "2025-12-27T18:24:26Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #95",
+              "start": "2025-12-28T09:34:46Z",
+              "end": "2025-12-28T09:47:03Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2025-12-31": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #98",
+              "start": "2025-12-31T01:22:01Z",
+              "end": "2025-12-31T03:05:53Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-01": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #100",
+              "start": "2026-01-01T01:51:45Z",
+              "end": "2026-01-01T03:29:10Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-02": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #102",
+              "start": "2026-01-01T16:54:16Z",
+              "end": "2026-01-01T17:15:57Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-03": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #104",
+              "start": "2026-01-02T18:50:13Z",
+              "end": "2026-01-02T19:19:49Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #106",
+              "start": "2026-01-03T01:22:28Z",
+              "end": "2026-01-03T02:58:54Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-04": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #108",
+              "start": "2026-01-03T19:24:57Z",
+              "end": "2026-01-04T04:38:31Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-06": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #110",
+              "start": "2026-01-06T05:59:31Z",
+              "end": "2026-01-06T07:01:52Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-08": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #113",
+              "start": "2026-01-07T22:55:33Z",
+              "end": "2026-01-08T05:29:18Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-09": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #115",
+              "start": "2026-01-08T22:56:54Z",
+              "end": "2026-01-09T06:40:55Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-10": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #117",
+              "start": "2026-01-09T22:49:51Z",
+              "end": "2026-01-10T05:10:23Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #119",
+              "start": "2026-01-10T09:16:15Z",
+              "end": "2026-01-10T11:27:53Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #121",
+              "start": "2026-01-10T15:03:23Z",
+              "end": "2026-01-10T17:46:10Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-11": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #124",
+              "start": "2026-01-10T22:18:14Z",
+              "end": "2026-01-11T04:15:55Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-12": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #126",
+              "start": "2026-01-12T01:04:24Z",
+              "end": "2026-01-12T04:19:11Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-13": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #128",
+              "start": "2026-01-12T22:36:52Z",
+              "end": "2026-01-13T01:26:53Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #130",
+              "start": "2026-01-13T10:20:32Z",
+              "end": "2026-01-13T12:42:02Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-14": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #132",
+              "start": "2026-01-13T23:13:50Z",
+              "end": "2026-01-14T03:51:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #134",
+              "start": "2026-01-14T22:35:57Z",
+              "end": "2026-01-15T04:10:45Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-16": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #135",
+              "start": "2026-01-16T09:56:12Z",
+              "end": "2026-01-16T11:44:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-17": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #136",
+              "start": "2026-01-16T17:51:15Z",
+              "end": "2026-01-16T18:15:43Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-18": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #137",
+              "start": "2026-01-18T11:16:06Z",
+              "end": "2026-01-18T11:32:20Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #138",
+              "start": "2026-01-18T13:37:32Z",
+              "end": "2026-01-18T14:00:20Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #140",
+              "start": "2026-01-18T14:52:23Z",
+              "end": "2026-01-18T15:11:18Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #142",
+              "start": "2026-01-18T16:22:01Z",
+              "end": "2026-01-19T03:25:54Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #145",
+              "start": "2026-01-19T05:17:53Z",
+              "end": "2026-01-19T05:49:56Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #146",
+              "start": "2026-01-19T06:59:49Z",
+              "end": "2026-01-19T10:40:00Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #150",
+              "start": "2026-01-19T10:59:14Z",
+              "end": "2026-01-19T11:29:33Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #152",
+              "start": "2026-01-19T15:36:16Z",
+              "end": "2026-01-19T15:54:43Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-20": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #155",
+              "start": "2026-01-19T17:56:34Z",
+              "end": "2026-01-19T18:36:07Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #157",
+              "start": "2026-01-19T18:58:20Z",
+              "end": "2026-01-19T19:39:04Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #160",
+              "start": "2026-01-19T19:58:40Z",
+              "end": "2026-01-19T20:50:11Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #163",
+              "start": "2026-01-19T22:54:42Z",
+              "end": "2026-01-19T23:10:29Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #167",
+              "start": "2026-01-20T05:16:57Z",
+              "end": "2026-01-20T05:47:58Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #169",
+              "start": "2026-01-20T06:52:04Z",
+              "end": "2026-01-21T04:14:12Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-01-30": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #171",
+              "start": "2026-01-29T16:56:34Z",
+              "end": "2026-01-29T17:39:07Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            },
+            {
+              "title": "Upptime 故障 #173",
+              "start": "2026-01-30T04:56:50Z",
+              "end": "2026-01-30T05:41:40Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-02-15": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #175",
+              "start": "2026-02-15T08:31:24Z",
+              "end": "2026-02-15T16:40:43Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-03-19": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #178",
+              "start": "2026-03-18T22:54:04Z",
+              "end": "2026-03-19T03:41:48Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-04-16": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #181",
+              "start": "2026-04-16T03:46:01Z",
+              "end": "2026-04-16T05:52:39Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        },
+        "2026-05-05": {
+          "state": "degraded",
+          "events": [
+            {
+              "title": "Upptime 故障 #184",
+              "start": "2026-05-05T06:08:01Z",
+              "end": "2026-05-05T08:25:45Z",
+              "summary": "时间来自故障 Issue 的创建与关闭记录。"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
