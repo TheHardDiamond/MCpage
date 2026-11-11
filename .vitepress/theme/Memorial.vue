@@ -27,7 +27,7 @@ const calendar = computed(() => {
   if (!calendarMonth.value) return []
   const start = days(calendarMonth.value + '-01')
   const cursor = new Date(start)
-  const padding = (cursor.getUTCDay() + 6) % 7
+  const padding = cursor.getUTCDay()
   cursor.setUTCMonth(cursor.getUTCMonth() + 1)
   return Array.from({ length: Math.ceil((padding + (cursor.getTime() - start) / DAY) / 7) * 7 },
     (_, i) => date(start + (i - padding) * DAY))
@@ -236,7 +236,7 @@ onUnmounted(() => {
           </div>
         </div>
         <div class="calendar">
-          <span v-for="weekday in '一二三四五六日'" :key="weekday">{{ weekday }}</span>
+          <span v-for="weekday in '日一二三四五六'" :key="weekday">{{ weekday }}</span>
           <template v-for="key in calendar" :key="key">
             <button v-if="key.startsWith(calendarMonth)" :aria-label="calendarLabel(key)" :class="{ incident: archive.services.some(service => day(service,key).events.length) }"
               @mouseenter="showHint($event, calendarLabel(key))" @mouseleave="hideHint" @focus="showHint($event, calendarLabel(key))" @blur="hideHint" @click="openDay(key)">
