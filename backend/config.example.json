@@ -1,0 +1,8 @@
+{
+  "bind": "127.0.0.1",
+  "httpPort": 8787,
+  "origins": ["http://localhost:5173", "https://YOUR-ACCOUNT.github.io"],
+  "servers": [
+    {"id": "velocity", "name": "Velocity", "host": "mc.example.org", "port": 25565}
+  ]
+}

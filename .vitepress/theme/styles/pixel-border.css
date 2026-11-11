@@ -1,0 +1,19 @@
+.pixel-border {
+  box-sizing: border-box;
+  color: var(--pixel-color-text);
+  background-color: var(--pixel-card-bg);
+  border: 2px solid;
+  border-top-color: var(--pixel-border-highlight);
+  border-left-color: var(--pixel-border-highlight);
+  border-right-color: var(--pixel-border-shadow);
+  border-bottom-color: var(--pixel-border-shadow);
+  outline: 1px solid var(--pixel-border-outer);
+  box-shadow: inset 0 0 0 5px var(--pixel-border-fill);
+}
+
+/* <img> doesn't support inset box-shadow; use padding + bg as fallback */
+img.pixel-border {
+  box-shadow: none;
+  padding: 5px;
+  background-color: var(--pixel-border-fill);
+}

@@ -1,0 +1,40 @@
+name: Deploy memorial to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: Restore pinned Pixel Eco assets
+        run: |
+          mkdir -p src/public
+          curl --fail --silent --show-error --location https://codeload.github.com/Lylighte/pixel-eco/tar.gz/8bcce5586476ac4f3674f70550f17af3cd88d49a | tar -xz --strip-components=3 -C src/public --wildcards '*/src/public/*'
+      - run: npm ci
+      - run: npm run build
+        env:
+          PAGES_BASE: ${{ steps.pages.outputs.base_path }}/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .vitepress/dist
+      - uses: actions/deploy-pages@v4
+        id: deploy
+

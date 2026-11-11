@@ -1,0 +1,670 @@
+/* ═══════════════════════════════════════════════════════════
+   Design Tokens — Three-Layer Architecture
+   Layer 1: Primitives (原始调色板)
+   Layer 2: Semantic Tokens (语义令牌)
+   Layer 3: Component Tokens (组件令牌)
+   ═══════════════════════════════════════════════════════════ */
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* ───────────────────────────────────────────
+     Layer 1: Primitives
+     ─────────────────────────────────────────── */
+  --pixel-brand: #d84b4b;
+  --pixel-brand-light: #e48181;
+  --pixel-brand-dark: #7e1b1b;
+  --pixel-gray-light: #747271;
+  --pixel-gray: #3d3938;
+  --pixel-gray-dark: #262524;
+  --pixel-dark: #171615;
+
+  /* ───────────────────────────────────────────
+     Layer 2: Semantic Tokens
+     ─────────────────────────────────────────── */
+  /* Colors */
+  --pixel-color-bg: var(--pixel-dark);
+  --pixel-color-bg-card: #313131;
+  --pixel-color-bg-overlay: rgba(0, 0, 0, 0.7);
+  --pixel-color-bg-input: #616161;
+  --pixel-color-text: rgba(255, 255, 255, 0.9);
+  --pixel-color-text-muted: rgba(255, 255, 255, 0.8);
+  --pixel-color-text-solid: #fff;
+  --pixel-color-text-inverse: #000;
+  --pixel-color-accent: var(--pixel-brand);
+  --pixel-color-accent-light: var(--pixel-brand-light);
+  --pixel-color-accent-dark: var(--pixel-brand-dark);
+  --pixel-color-accent-soft: rgba(216, 75, 75, 0.1);
+  --pixel-color-link-visited: #c28f8f;
+  --pixel-color-border: var(--pixel-gray);
+  --pixel-color-border-dark: #000;
+  --pixel-color-success: #3a7d3a;
+  --pixel-color-warning: #d4a017;
+  --pixel-color-danger: #a53a3a;
+  --pixel-color-info: #3a6ea5;
+  --pixel-color-success-border: #2a6a2a;
+  --pixel-color-warning-border: #b08810;
+  --pixel-color-danger-border: #8a2a2a;
+  --pixel-color-info-border: #2a5a8a;
+  --pixel-color-success-light: #5aad5a;
+  --pixel-color-warning-light: #e4b030;
+  --pixel-color-danger-light: #d55a5a;
+  --pixel-color-info-light: #5a9ed5;
+  --pixel-color-social-github: #171515;
+  --pixel-color-social-qq: #5eaade;
+  --pixel-color-social-bilibili: #1296db;
+
+  /* Typography */
+  --pixel-font-heading: 'Ark Pixel', 'Unifont', monospace;
+  --pixel-font-code: 'Monocraft', 'Unifont', monospace;
+  --pixel-font-body: 'Unifont', monospace;
+  --pixel-font-size-s: 0.75rem; /* 12px — 小字，锁定 Ark Pixel，禁用 Unifont */
+  --pixel-font-size-m: 1rem; /* 16px — 正文，Unifont 绝对清晰 */
+  --pixel-font-size-title: 1.25rem; /* 20px — 次级标题 */
+  --pixel-font-size-l: 1.5rem; /* 24px — 大标题，Ark Pixel 完美对齐 */
+  --pixel-line-height: 1.7;
+
+  /* Spacing */
+  /* Media-query tokens are expanded by .vitepress/breakpoints.ts. */
+  --pixel-break-compact: 640px;
+  --pixel-break-layout: 768px;
+  --pixel-break-outline: 1280px;
+  /* Measured nav border-box: 44px at 16px root font, mobile and desktop. */
+  --pixel-nav-height: 2.75rem;
+
+  --pixel-space-xs: 0.25rem;
+  --pixel-space-s: 0.5rem;
+  --pixel-space-m: 1rem;
+  --pixel-space-l: 2rem;
+  --pixel-space-xl: 3rem;
+
+  /* Shadows */
+  --pixel-shadow-soft: 4px 4px rgba(0, 0, 0, 0.5);
+  --pixel-shadow-hard: 4px 4px rgba(0, 0, 0, 0.7);
+  --pixel-shadow-text: 2px 2px rgba(0, 0, 0, 0.5);
+
+  /* Borders */
+  --pixel-border: 2px solid var(--pixel-color-border);
+  --pixel-border-dark: 2px solid var(--pixel-color-border-dark);
+
+  /* Transitions */
+  --pixel-transition-fast: 0.1s ease-in-out;
+  --pixel-transition: 0.3s ease;
+  --pixel-transition-slow: 0.3s ease-in-out;
+
+  /* Misc */
+  --pixel-z-base: 0;
+  --pixel-z-raised: 1;
+  --pixel-z-content: 2;
+  --pixel-z-overlay: 512;
+  --pixel-z-nav: 1024;
+  --pixel-z-dialog: 2048;
+  --pixel-z-tooltip: 2048;
+
+  /* ───────────────────────────────────────────
+     Layer 3: Component Tokens
+     ─────────────────────────────────────────── */
+  /* PixelButton — 3D bevel shadow colors */
+  --pixel-btn-shadow-light: rgba(255, 255, 255, 0.4);
+  --pixel-btn-shadow-dark: rgba(0, 0, 0, 0.4);
+  --pixel-btn-shadow-light-hover: var(--pixel-brand-light);
+  --pixel-btn-shadow-dark-hover: var(--pixel-brand-dark);
+
+  /* PixelButton */
+  --pixel-btn-bg: var(--pixel-color-accent);
+  --pixel-btn-bg-hover: var(--pixel-color-accent-light);
+  --pixel-btn-bg-base: #c6c6c6;
+  --pixel-btn-bg-dark: #303030;
+  --pixel-btn-bg-active: #8b8b8b;
+  --pixel-btn-text: var(--pixel-color-text-inverse);
+  --pixel-btn-text-hover: #fff;
+  --pixel-btn-border: var(--pixel-border-dark);
+  --pixel-btn-outline-dark: #333;
+  --pixel-btn-outline-hover: #fff;
+
+  /* PixelButtonClassic */
+  --pixel-btn-classic-bg: #999 url('/background/bgbtn.png') repeat;
+  --pixel-btn-classic-active-bg: rgba(100, 100, 255, 0.45);
+  --pixel-btn-classic-active-text: #ffffa0;
+  --pixel-btn-classic-active-shadow: 2px 2px #202013cc;
+  --pixel-btn-classic-text: #ddd;
+  --pixel-btn-classic-shadow: 2px 2px #000a;
+  --pixel-btn-classic-inset-dark: #0004;
+  --pixel-btn-classic-inset-dark-strong: #0006;
+  --pixel-btn-classic-inset-light: #fff5;
+  --pixel-btn-classic-inset-light-strong: #fff7;
+
+  /* PixelButton3D */
+  --pixel-btn-3d-offset: 12px;
+  --pixel-btn-3d-bg: #313233;
+  --pixel-btn-3d-border: rgba(0, 0, 0, 0.4);
+  --pixel-btn-3d-hover-overlay: #ffffff08;
+  --pixel-btn-3d-shadow-top: rgb(104, 104, 104);
+  --pixel-btn-3d-highlight: rgba(178, 178, 178, 0.5);
+  --pixel-btn-3d-shadow-bottom: rgba(153, 153, 153, 0.5);
+
+  /* PixelInput / PixelTextarea — recessed border */
+  --pixel-input-shadow-dark: #545454;
+  --pixel-input-shadow-light: #c6c6c6;
+
+  /* PixelInput / PixelTextarea */
+  --pixel-input-bg: var(--pixel-color-bg-input);
+  --pixel-input-border: var(--pixel-border-dark);
+  --pixel-input-text: #fff;
+  --pixel-input-placeholder: #ddd;
+  --pixel-input-disabled-text: #aaa;
+  --pixel-input-disabled-bg: #424242;
+
+  /* NavBar */
+  --pixel-nav-bg: rgba(0, 0, 0, 0.5);
+  --pixel-nav-border: var(--pixel-border);
+  --pixel-nav-shadow: var(--pixel-shadow-hard);
+  --pixel-nav-slider-bg: #c43030;
+  --pixel-nav-slider-border-top: #e06060;
+  --pixel-nav-slider-border-bottom: #8a1a1a;
+  --pixel-nav-item-text-hover: #fff;
+
+  /* PixelDialog / .pixel-border */
+  --pixel-dialog-overlay: var(--pixel-color-bg-overlay);
+  --pixel-dialog-bg: var(--pixel-color-bg-card);
+  --pixel-border-outer: #000;
+  --pixel-border-highlight: #fff;
+  --pixel-border-shadow: #555;
+  --pixel-border-fill: #c6c6c6;
+
+  /* Cards (BlogCard, LinkCard) */
+  --pixel-card-bg: var(--pixel-color-bg-card);
+  --pixel-card-shadow: var(--pixel-shadow-soft);
+  --pixel-linkcard-overlay-bg: rgba(0, 0, 0, 0.7);
+  --pixel-linkcard-title-color: #fff;
+
+  /* DocsSidebar */
+  --pixel-sidebar-bg: var(--pixel-color-bg-card);
+  --pixel-sidebar-border: var(--pixel-border);
+  --pixel-sidebar-active-bg: var(--pixel-color-accent-soft);
+  --pixel-sidebar-hover-bg: rgba(255, 255, 255, 0.05);
+
+  /* HomeHero */
+  --pixel-hero-overlay: var(--pixel-color-bg-overlay);
+  --pixel-hero-gradient: linear-gradient(135deg, #7e1b1b 0%, #171615 50%, #d84b4b 100%);
+  --pixel-hero-title-color: #fff;
+  --pixel-hero-padding-inline: 5%;
+  --pixel-hero-content-width: 40%;
+  --pixel-hero-content-min-width: 25rem;
+
+  /* SiteFooter */
+  --pixel-footer-title: #fff;
+  --pixel-footer-text: #ddd;
+  --pixel-footer-border: #909399;
+  --pixel-footer-copyright: #999;
+  --pixel-footer-declaration: #aaa;
+
+  /* ArticleView */
+  --pixel-article-category-bg: rgba(0, 0, 0, 0.6);
+
+  /* ───────────────────────────────────────────
+     Backward compat aliases
+     ─────────────────────────────────────────── */
+  --background-card: var(--pixel-color-bg-card);
+
+  /* ───────────────────────────────────────────
+     Base
+     ─────────────────────────────────────────── */
+  line-height: var(--pixel-line-height);
+  font-weight: 400;
+  letter-spacing: 0;
+
+  color-scheme: dark;
+  color: var(--pixel-color-text);
+  background-color: var(--pixel-color-bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+
+  /* ── VitePress default variable overrides ── */
+  --vp-c-bg: var(--pixel-color-bg);
+  --vp-c-bg-elv: var(--pixel-color-bg-card);
+  --vp-c-bg-soft: var(--pixel-color-bg-card);
+  --vp-c-text-1: var(--pixel-color-text);
+  --vp-c-text-2: rgba(255, 255, 255, 0.7);
+  --vp-c-border: #909399;
+  --vp-c-divider: var(--pixel-color-border);
+  --vp-c-brand-1: var(--pixel-color-accent-light);
+  --vp-c-brand-2: var(--pixel-color-accent);
+  --vp-c-brand-3: var(--pixel-color-accent-dark);
+  --vp-nav-bg-color: var(--pixel-nav-bg);
+  --vp-layout-max-width: 100%;
+
+  /* ── Code block dark background ── */
+  --vp-code-block-bg: #1a1a1c;
+  --vp-code-font-size: var(--pixel-font-size-s);
+  --vp-custom-block-font-size: var(--pixel-font-size-m);
+  --vp-custom-block-code-font-size: var(--pixel-font-size-s);
+  --vp-code-line-highlight-color: rgba(255, 255, 255, 0.05);
+  --vp-code-copy-code-bg: rgba(255, 255, 255, 0.06);
+  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.12);
+  --vp-code-tab-bg: #1a1a1c;
+  --vp-code-tab-text-color: rgba(255, 255, 255, 0.5);
+  --vp-code-lang-color: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  color: var(--pixel-color-text-inverse);
+  background: var(--pixel-color-accent);
+}
+
+/* ── Pixel Font Stack (global selectors → Layer 2) ── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--pixel-font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: var(--pixel-font-size-l); /* 24px — Ark Pixel 2× */
+}
+
+h2 {
+  font-size: var(--pixel-font-size-title); /* 20px — Ark/Mono 完美对齐 */
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--pixel-font-size-m); /* 16px — 与正文一致，通过颜色/间距区分 */
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--pixel-font-code);
+}
+
+body {
+  font-family: var(--pixel-font-body);
+  font-size: var(--pixel-font-size-m);
+  line-height: var(--pixel-line-height);
+  font-synthesis: none;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+.pixel-text {
+  font-family: var(--pixel-font-body);
+  font-size: var(--pixel-font-size-m);
+  line-height: var(--pixel-line-height);
+}
+
+/* One Markdown reading style for docs, news and prose pages. */
+.vp-doc {
+  font-size: var(--pixel-font-size-m);
+  line-height: var(--pixel-line-height);
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-weight: 400;
+  line-height: var(--pixel-line-height);
+  letter-spacing: 1px;
+}
+
+.hero-subtitle,
+.intro-title,
+.footer-name,
+.link-content p,
+.overview-title,
+.sidebar-title,
+.sidebar-group-name,
+.dialog-title,
+.pixel-card__title,
+.pixel-timeline__title,
+.pixel-accordion__title,
+.result-title {
+  letter-spacing: 1px;
+}
+
+.vp-doc h1 {
+  font-size: var(--pixel-font-size-l);
+}
+
+.vp-doc h2 {
+  margin-top: 2rem;
+  font-size: var(--pixel-font-size-title);
+}
+
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-size: var(--pixel-font-size-m);
+  color: var(--pixel-color-accent-light);
+}
+
+.vp-doc p {
+  margin: 1rem 0;
+}
+
+.vp-doc p,
+.vp-doc li,
+.vp-doc blockquote > p {
+  line-height: var(--pixel-line-height);
+}
+
+.vp-doc ul,
+.vp-doc ol {
+  padding-left: 1.5rem;
+}
+
+.vp-doc li {
+  margin: 0.5rem 0;
+}
+
+.vp-doc blockquote {
+  border-left: 4px solid var(--pixel-brand);
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: var(--pixel-color-text-muted);
+  background: var(--pixel-color-accent-soft);
+}
+
+.vp-doc :not(pre) > code {
+  border-radius: 0;
+  padding: 0.15rem 0.4rem;
+  background: var(--pixel-card-bg);
+}
+
+.vp-doc :is(h1, h2, h3, h4, h5, h6) > code {
+  font-size: inherit;
+}
+
+.vp-doc a {
+  font-weight: 400;
+}
+
+/* Component links keep their card/button styling; prose gets a pixel underline. */
+.vp-doc
+  a:not(
+    :where(
+      .header-anchor,
+      .link-card,
+      .pixel-card,
+      .overview-title,
+      .overview-button-wrap,
+      .search-result-item,
+      .not-found-link
+    )
+  ),
+#declaration a {
+  color: var(--vp-c-brand-1);
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.vp-doc
+  a:not(
+    :where(
+      .header-anchor,
+      .link-card,
+      .pixel-card,
+      .overview-title,
+      .overview-button-wrap,
+      .search-result-item,
+      .not-found-link
+    )
+  ):visited,
+#declaration a:visited {
+  color: var(--pixel-color-link-visited);
+}
+
+.vp-doc
+  a:not(
+    :where(
+      .header-anchor,
+      .link-card,
+      .pixel-card,
+      .overview-title,
+      .overview-button-wrap,
+      .search-result-item,
+      .not-found-link
+    )
+  ):hover:not(:focus-visible),
+#declaration a:hover:not(:focus-visible) {
+  color: var(--pixel-color-text-solid);
+  text-decoration-style: solid;
+}
+
+/* Link labels, including inline code, follow the parent link's state color. */
+.vp-doc a :is(code, strong, b, em),
+.vp-doc a:hover :is(code, strong, b, em),
+.vp-doc .custom-block a:hover :is(code, strong, b, em) {
+  color: inherit;
+}
+
+.vp-doc .custom-block a:hover {
+  opacity: 1;
+}
+
+.vp-doc .custom-block a:focus-visible {
+  color: var(--vp-c-brand-1);
+}
+
+.vp-doc .custom-block a:visited:focus-visible {
+  color: var(--pixel-color-link-visited);
+}
+
+.vp-doc .header-anchor {
+  font-weight: 400;
+  color: var(--pixel-color-accent-light);
+}
+
+.vp-doc .header-anchor:hover:not(:focus-visible) {
+  color: var(--pixel-color-text-solid);
+}
+
+.vp-doc .header-anchor:focus-visible {
+  color: var(--pixel-color-accent-light);
+}
+
+.vp-doc table {
+  width: fit-content;
+  max-width: 100%;
+  border: var(--pixel-border);
+  border-radius: 0;
+  box-shadow: var(--pixel-shadow-hard);
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: var(--pixel-border);
+  font-size: var(--pixel-font-size-m);
+  line-height: var(--pixel-line-height);
+}
+
+.vp-doc th {
+  font-weight: 400;
+  color: var(--pixel-color-accent-light);
+}
+
+.vp-doc hr {
+  border: 0;
+  border-top: var(--pixel-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.vp-doc mark {
+  color: var(--pixel-color-text-inverse);
+  background: var(--pixel-color-accent-light);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.vp-doc kbd {
+  display: inline-block;
+  padding: 0 0.25rem;
+  font-size: var(--pixel-font-size-s);
+  line-height: var(--pixel-line-height);
+  color: var(--pixel-color-text);
+  background: var(--pixel-color-bg-card);
+  border: var(--pixel-border-dark);
+  border-radius: 0;
+  box-shadow: 2px 2px var(--pixel-color-border-dark);
+}
+
+.vp-doc div[class*='language-'],
+.vp-doc .vp-code-group .tabs,
+.vp-doc [class*='language-'] > button.copy,
+.vp-doc [class*='language-'] > button.copy.copied,
+.vp-doc [class*='language-'] > button.copy.copied::before,
+.vp-doc .custom-block {
+  border-radius: 0;
+}
+
+.vp-doc .custom-block-title,
+.vp-doc .custom-block summary {
+  font-family: var(--pixel-font-heading);
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.vp-doc .custom-block p {
+  line-height: var(--pixel-line-height);
+}
+
+.vp-doc [class*='language-'] > span.lang,
+.vp-doc [class*='language-'] > button.copy.copied::before {
+  font-weight: 400;
+}
+
+/* Emphasis uses real color hierarchy; the body fonts only provide weight 400. */
+strong,
+b,
+.vp-doc strong,
+.vp-doc b {
+  font-weight: 400;
+  color: var(--pixel-color-accent-light);
+}
+
+em,
+.vp-doc em {
+  font-style: normal;
+  color: var(--pixel-color-text);
+  border-bottom: 2px solid var(--pixel-color-accent-light);
+}
+
+/* Monocraft has real bold and italic faces. */
+code strong,
+code b,
+kbd strong,
+kbd b,
+samp strong,
+samp b,
+.vp-doc :is(code, kbd, samp) :is(strong, b) {
+  font-weight: 700;
+  color: inherit;
+}
+
+code em,
+kbd em,
+samp em,
+.vp-doc :is(code, kbd, samp) em {
+  font-style: italic;
+  color: inherit;
+  background: transparent;
+  border-bottom: 0;
+}
+
+/* Keep keyboard focus visible above scoped component hover/active outlines. */
+html:has(:focus-visible) {
+  scroll-behavior: auto;
+}
+
+.pixel-layout :focus-visible {
+  outline: 2px dashed var(--pixel-color-accent-light) !important;
+  outline-offset: 4px;
+  scroll-margin-block: calc(var(--pixel-nav-height) + var(--pixel-space-l)) 1rem;
+}
+
+/* Solid outlines remain identifiable on button bevels and photographic covers. */
+.pixel-layout
+  :is(
+    .pixel-button,
+    .pixel-button-classic,
+    .pixel-button-3d,
+    .link-card,
+    .overview-button-wrap
+  ):focus-visible {
+  outline-style: solid !important;
+}
+
+/* The nav clips overflow; draw focus inside it, in white against the red slider. */
+.pixel-layout .nav-item:focus-visible {
+  outline-style: solid !important;
+  outline-color: var(--pixel-color-text-solid) !important;
+  outline-offset: -4px;
+}
+
+/* ── 演示区与代码块间距 ── */
+.vp-doc + div[class*='language-'] {
+  margin-top: 1.5rem;
+}
+
+/* ── 深色滚动条 ── */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pixel-color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pixel-gray);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pixel-gray-light);
+}
+
+/* ── Respect the OS reduced-motion preference ── */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}

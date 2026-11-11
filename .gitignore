@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.vitepress/cache/
+.vitepress/dist/
+__pycache__/
+backend/config.local.json
+private/
+.env.local
