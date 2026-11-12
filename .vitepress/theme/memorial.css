@@ -55,6 +55,17 @@ dialog { max-width:min(560px,90vw); max-height:85vh; background:#1b241d; color:#
 .floating-hint { position:fixed; z-index:10; width:max-content; max-width:min(230px, calc(100vw - 16px)); max-height:65px; overflow:hidden; padding:.4rem .55rem; border:1px solid #637463; border-radius:4px; background:#0e130f; color:#eef6e8; font-size:.78rem; pointer-events:none; }
 dialog::backdrop { background:#0009; }
 dialog form { text-align:right; }
-.day-service { border-top:1px solid #37423a; }
+.calendar-jump { display:flex; align-items:center; flex-wrap:wrap; gap:.65rem; margin:0 0 1rem; }
+.calendar-jump label { display:flex; align-items:center; gap:.35rem; }
+.calendar-jump input { width:5rem; padding:.4rem; border:1px solid #627a5e; border-radius:3px; background:#202823; color:inherit; font:inherit; }
+.calendar-jump label:nth-child(2) input { width:3.25rem; }
+.calendar-jump [role=alert] { color:#ffb5ad; }
+.day-service { border:1px solid #59685c; border-left:4px solid #59685c; border-radius:6px; padding:.7rem .85rem; margin:.65rem 0; }
+.day-service[data-state=ok] { border-left-color:#59bf72; }
+.day-service[data-state=degraded] { border-left-color:#dfab48; }
+.day-service[data-state=down] { border-left-color:#e36e63; }
+.day-service h3 { margin:.15rem 0; }
+.day-event { border:1px solid #526154; border-radius:5px; padding:.65rem; margin:.65rem 0 .1rem; background:#202a22; }
+.day-event p { margin:.35rem 0; }
 @media(max-width:540px) { .server { grid-template-columns:40px 1fr; } .server button { grid-column:2; justify-self:start; } }
 
