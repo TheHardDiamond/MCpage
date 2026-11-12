@@ -23,6 +23,26 @@ const cards = computed(() => byDate.filter(item => item.date.startsWith(month.va
 const offset = ref(0)
 const period = computed(() => cutoff ? Array.from({ length: 90 }, (_, i) => date(days(cutoff) - (offset.value * 90 + 89 - i) * DAY)) : [])
 const calendarMonth = ref(cutoff.slice(0, 7))
+const jumpYear = ref(calendarMonth.value.slice(0, 4))
+const jumpMonth = ref(calendarMonth.value.slice(5))
+const jumpError = ref('')
+function setCalendarMonth(value) {
+  if (value < '2020-01' || value > '2099-12') return
+  calendarMonth.value = value
+  jumpYear.value = value.slice(0, 4)
+  jumpMonth.value = value.slice(5)
+  jumpError.value = ''
+}
+function jumpToMonth() {
+  const year = String(jumpYear.value).trim()
+  const month = String(jumpMonth.value).trim()
+  if (!/^\d{4}$/.test(year) || +year < 2020 || +year > 2099 ||
+      !/^\d{1,2}$/.test(month) || +month < 1 || +month > 12) {
+    jumpError.value = '请输入 2020–2099 年和 1–12 月。'
+    return
+  }
+  setCalendarMonth(year + '-' + month.padStart(2, '0'))
+}
 const calendar = computed(() => {
   if (!calendarMonth.value) return []
   const start = days(calendarMonth.value + '-01')
@@ -35,11 +55,11 @@ const calendar = computed(() => {
 function changeMonth(delta) {
   const cursor = new Date(days(calendarMonth.value + '-01'))
   cursor.setUTCMonth(cursor.getUTCMonth() + delta)
-  calendarMonth.value = date(cursor).slice(0, 7)
+  setCalendarMonth(date(cursor).slice(0, 7))
 }
 function changePeriod(delta) {
   offset.value += delta
-  calendarMonth.value = period.value.at(-1).slice(0, 7)
+  setCalendarMonth(period.value.at(-1).slice(0, 7))
 }
 const dayDetail = ref('')
 const dialog = ref()
@@ -230,11 +250,17 @@ onUnmounted(() => {
         <div class="section-heading">
           <h2>事件日历</h2>
           <div class="pager">
-            <button aria-label="上个月" :disabled="calendarMonth <= firstDay.slice(0,7)" @click="changeMonth(-1)">‹</button>
+            <button aria-label="上个月" :disabled="calendarMonth <= '2020-01'" @click="changeMonth(-1)">‹</button>
             <span>{{ calendarMonth }}</span>
-            <button aria-label="下个月" :disabled="calendarMonth >= cutoff.slice(0,7)" @click="changeMonth(1)">›</button>
+            <button aria-label="下个月" :disabled="calendarMonth >= '2099-12'" @click="changeMonth(1)">›</button>
           </div>
         </div>
+        <form class="calendar-jump" novalidate @submit.prevent="jumpToMonth">
+          <label>年份 <input v-model="jumpYear" type="text" inputmode="numeric" maxlength="4"></label>
+          <label>月份 <input v-model="jumpMonth" type="text" inputmode="numeric" maxlength="2"></label>
+          <button type="submit">跳转</button>
+          <span v-if="jumpError" role="alert">{{ jumpError }}</span>
+        </form>
         <div class="calendar">
           <span v-for="weekday in '日一二三四五六'" :key="weekday">{{ weekday }}</span>
           <template v-for="key in calendar" :key="key">
@@ -249,9 +275,9 @@ onUnmounted(() => {
       <dialog ref="dialog">
         <form method="dialog"><button aria-label="关闭日期详情">关闭</button></form>
         <h2>{{ dayDetail }}</h2>
-        <section v-for="service in archive.services" :key="service.id" class="day-service">
+        <section v-for="service in archive.services" :key="service.id" class="day-service" :data-state="day(service,dayDetail).state">
           <h3>{{ service.name }} · {{ labels[day(service,dayDetail).state] }}</h3>
-          <article v-for="(event, index) in day(service,dayDetail).events" :key="index">
+          <article v-for="(event, index) in day(service,dayDetail).events" :key="index" class="day-event">
             <strong>{{ event.title }}</strong>
             <p v-if="event.start || event.end">{{ event.start ? dateTime(event.start) : '' }}{{ event.end ? ' 至 ' + dateTime(event.end) : '' }}</p>
             <p v-if="event.summary">{{ event.summary }}</p>
