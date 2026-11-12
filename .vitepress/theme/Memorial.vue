@@ -103,12 +103,14 @@ function approved(id) { return byDate.some(item => item.id === id) }
 
 const servers = ref([])
 const apiError = ref(false)
+const skinChecks = ref([])
+const hasStatusSource = Boolean(config.mcApi || config.statusSnapshot)
 const cooldowns = ref({})
 const pending = ref({})
 const now = ref(0)
 let refreshTimer, clockTimer
 function merge(server) {
-  const expires = Date.now() + server.retryAfter * 1000
+  const expires = Date.now() + (server.retryAfter ?? 0) * 1000
   cooldowns.value[server.id] = Math.max(cooldowns.value[server.id] || 0, expires)
   const previous = servers.value.find(item => item.id === server.id)
   if (previous?.checkedAt && (!server.checkedAt || Date.parse(previous.checkedAt) > Date.parse(server.checkedAt))) return
@@ -116,11 +118,15 @@ function merge(server) {
 }
 function remaining(id) { return Math.max(0, Math.ceil(((cooldowns.value[id] || 0) - now.value) / 1000)) }
 async function load() {
-  if (!config.mcApi || document.hidden) return
+  if (!hasStatusSource || document.hidden) return
   try {
-    const response = await fetch(config.mcApi + '/api/servers', { signal: AbortSignal.timeout(10000) })
+    const response = await fetch(config.mcApi ? config.mcApi + '/api/servers' : config.statusSnapshot, {
+      cache: 'no-store', signal: AbortSignal.timeout(10000),
+    })
     if (!response.ok) throw new Error()
-    for (const server of await response.json()) merge(server)
+    const snapshot = await response.json()
+    for (const server of (config.mcApi ? snapshot : snapshot.servers)) merge(server)
+    if (!config.mcApi) skinChecks.value = snapshot.http
     apiError.value = false
   } catch { apiError.value = true }
 }
@@ -145,7 +151,7 @@ async function refresh(id) {
 }
 onMounted(() => {
   if (props.page === 'chronicle') openLinkedStory()
-  if (props.page !== 'status' || !config.mcApi) return
+  if (props.page !== 'status' || !hasStatusSource) return
   now.value = Date.now()
   load()
   clockTimer = setInterval(() => { now.value = Date.now() }, 250)
@@ -202,7 +208,8 @@ onUnmounted(() => {
     <div v-if="tooltip" class="floating-hint" aria-hidden="true" :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }">{{ tooltip.text }}</div>
     <section class="panel">
       <h2>Minecraft</h2>
-      <p v-if="!config.mcApi">查询后端待配置。</p>
+      <button v-if="config.statusSnapshot && !config.mcApi" type="button" @click="load">刷新探测结果</button>
+      <p v-if="!hasStatusSource">查询后端待配置。</p>
       <p v-else-if="apiError" role="status">查询后端暂不可用。已加载的结果保留原探测时间。</p>
       <p v-else-if="!servers.length" role="status">暂无服务器结果。</p>
       <article v-for="server in servers" :key="server.id" class="server">
@@ -219,12 +226,21 @@ onUnmounted(() => {
           </details>
           <small v-if="server.checkedAt">最后探测 {{ dateTime(server.checkedAt) }}</small>
         </div>
-        <button :disabled="pending[server.id] || remaining(server.id) > 0" @click="refresh(server.id)">{{ pending[server.id] ? '查询中' : remaining(server.id) ? remaining(server.id) + ' 秒后可查询' : '立即查询' }}</button>
+        <button v-if="config.mcApi" :disabled="pending[server.id] || remaining(server.id) > 0" @click="refresh(server.id)">{{ pending[server.id] ? '查询中' : remaining(server.id) ? remaining(server.id) + ' 秒后可查询' : '立即查询' }}</button>
       </article>
     </section>
 
+    <section v-if="config.statusSnapshot && !config.mcApi" class="panel">
+      <h2>皮肤站探测</h2>
+      <p v-if="!skinChecks.length">等待探测快照。</p>
+      <p v-for="check in skinChecks" :key="check.id">
+        {{ check.name }} · {{ check.ok ? '正常' : '探测失败' }}{{ check.code ? ' · HTTP ' + check.code : '' }}
+        <small> · {{ dateTime(check.checkedAt) }}</small>
+      </p>
+      <button type="button" @click="load">刷新探测结果</button>
+    </section>
     <div class="archive-banner">
-      <strong>皮肤站监控已停止</strong>
+      <strong>旧 Upptime 监控存档</strong>
       <p>{{ archive.cutoff ? '存档截止 ' + dateTime(archive.cutoff) : '历史数据待导入。' }}</p>
     </div>
     <template v-if="period.length && archive.services.length">

@@ -3,5 +3,6 @@
   "mcApi": "",
   "welcome": "",
   "legacyLogo": "",
-  "legacyLinks": []
+  "legacyLinks": [],
+  "statusSnapshot": "https://raw.githubusercontent.com/TheHardDiamond/MCpage/status-data/status.json"
 }

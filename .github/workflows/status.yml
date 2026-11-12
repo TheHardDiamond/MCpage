@@ -1,0 +1,36 @@
+name: Probe Minecraft and skin services
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/status.yml', 'scripts/probe_status.py', 'backend/server.py']
+  schedule:
+    - cron: '3-58/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: status-data
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Probe services
+        run: python3 scripts/probe_status.py "$RUNNER_TEMP/status.json"
+      - name: Publish snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          remote_ref="$(git ls-remote --heads origin refs/heads/status-data)"
+          if [ -n "$remote_ref" ]; then
+            git fetch origin refs/heads/status-data
+            git switch --detach FETCH_HEAD
+          else
+            git switch --orphan status-data
+          fi
+          cp "$RUNNER_TEMP/status.json" status.json
+          git add status.json
+          git commit -m "Update service status snapshot"
+          git push origin HEAD:refs/heads/status-data
