@@ -4,5 +4,11 @@
   "welcome": "",
   "legacyLogo": "",
   "legacyLinks": [],
-  "statusSnapshot": "https://raw.githubusercontent.com/TheHardDiamond/MCpage/status-data/status.json"
+  "statusSnapshot": "https://raw.githubusercontent.com/TheHardDiamond/MCpage/status-data/status.json",
+  "mcServers": {
+    "southmount": {
+      "name": "Southmount",
+      "address": "play.southmount.cn"
+    }
+  }
 }

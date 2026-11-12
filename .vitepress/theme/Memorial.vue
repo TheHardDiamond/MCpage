@@ -104,6 +104,7 @@ function approved(id) { return byDate.some(item => item.id === id) }
 const servers = ref([])
 const apiError = ref(false)
 const skinChecks = ref([])
+const skinByService = computed(() => Object.fromEntries(skinChecks.value.map(check => ['csu-mc-' + check.id, check])))
 const hasStatusSource = Boolean(config.mcApi || config.statusSnapshot)
 const cooldowns = ref({})
 const pending = ref({})
@@ -207,8 +208,10 @@ onUnmounted(() => {
     <h1>服务状态</h1>
     <div v-if="tooltip" class="floating-hint" aria-hidden="true" :style="{ left: tooltip.x + 'px', top: tooltip.y + 'px' }">{{ tooltip.text }}</div>
     <section class="panel">
-      <h2>Minecraft</h2>
-      <button v-if="config.statusSnapshot && !config.mcApi" type="button" @click="load">刷新探测结果</button>
+      <div class="section-heading">
+        <h2>Minecraft</h2>
+        <button v-if="config.statusSnapshot && !config.mcApi" type="button" @click="load">刷新探测结果</button>
+      </div>
       <p v-if="!hasStatusSource">查询后端待配置。</p>
       <p v-else-if="apiError" role="status">查询后端暂不可用。已加载的结果保留原探测时间。</p>
       <p v-else-if="!servers.length" role="status">暂无服务器结果。</p>
@@ -216,7 +219,7 @@ onUnmounted(() => {
         <img v-if="server.icon" :src="server.icon" alt="" width="48" height="48">
         <span v-else class="server-placeholder" aria-hidden="true">▦</span>
         <div>
-          <h3>{{ server.name }}</h3>
+          <h3>{{ config.mcServers?.[server.id]?.name ?? server.name }}</h3>
           <p>{{ server.status === 'online' ? ('在线人数 ' + (server.online ?? '未知') + ' / ' + (server.max ?? '未知')) : server.status === 'pending' ? '等待首次探测' : '探测无响应' }}</p>
           <p v-if="server.motd" class="motd">{{ server.motd }}</p>
           <details v-if="server.status === 'online'">
@@ -224,21 +227,15 @@ onUnmounted(() => {
             <p>{{ server.sample?.join('、') || '暂无公开名称' }}</p>
             <p v-if="server.anonymous">匿名条目 {{ server.anonymous }} 个，可能包含假人。</p>
           </details>
-          <small v-if="server.checkedAt">最后探测 {{ dateTime(server.checkedAt) }}</small>
         </div>
-        <button v-if="config.mcApi" :disabled="pending[server.id] || remaining(server.id) > 0" @click="refresh(server.id)">{{ pending[server.id] ? '查询中' : remaining(server.id) ? remaining(server.id) + ' 秒后可查询' : '立即查询' }}</button>
+        <div class="server-meta">
+          <strong v-if="config.mcServers?.[server.id]?.address || server.address">{{ config.mcServers?.[server.id]?.address ?? server.address }}</strong>
+          <small v-if="server.checkedAt">最后探测 {{ dateTime(server.checkedAt) }}</small>
+          <button v-if="config.mcApi" :disabled="pending[server.id] || remaining(server.id) > 0" @click="refresh(server.id)">{{ pending[server.id] ? '查询中' : remaining(server.id) ? remaining(server.id) + ' 秒后可查询' : '立即查询' }}</button>
+        </div>
       </article>
     </section>
 
-    <section v-if="config.statusSnapshot && !config.mcApi" class="panel">
-      <h2>皮肤站探测</h2>
-      <p v-if="!skinChecks.length">等待探测快照。</p>
-      <p v-for="check in skinChecks" :key="check.id">
-        {{ check.name }} · {{ check.ok ? '正常' : '探测失败' }}{{ check.code ? ' · HTTP ' + check.code : '' }}
-        <small> · {{ dateTime(check.checkedAt) }}</small>
-      </p>
-      <button type="button" @click="load">刷新探测结果</button>
-    </section>
     <div class="archive-banner">
       <strong>旧 Upptime 监控存档</strong>
       <p>{{ archive.cutoff ? '存档截止 ' + dateTime(archive.cutoff) : '历史数据待导入。' }}</p>
@@ -251,10 +248,20 @@ onUnmounted(() => {
             <button aria-label="更早的 90 天" :disabled="period[0] <= firstDay" @click="changePeriod(1)">‹</button>
             <span>{{ period[0] }} 至 {{ period.at(-1) }}</span>
             <button aria-label="更新的 90 天" :disabled="offset === 0" @click="changePeriod(-1)">›</button>
+            <button v-if="config.statusSnapshot && !config.mcApi" type="button" @click="load">刷新探测结果</button>
           </div>
         </div>
         <div v-for="service in archive.services" :key="service.id" class="service">
-          <div class="section-heading"><h3>{{ service.name }}</h3><span v-if="rate(service)">{{ rate(service) }}</span></div>
+          <div class="section-heading">
+            <div class="service-summary">
+              <h3>{{ service.name }}</h3>
+              <span v-if="skinByService[service.id]" class="service-current">
+                {{ skinByService[service.id].ok ? '正常' : '探测失败' }}<template v-if="skinByService[service.id].code"> · HTTP {{ skinByService[service.id].code }}</template>
+                · {{ dateTime(skinByService[service.id].checkedAt) }}
+              </span>
+            </div>
+            <span v-if="rate(service)">{{ rate(service) }}</span>
+          </div>
           <div class="strip-scroll" @scroll="hideHint"><div class="strip">
             <button v-for="key in period" :key="key" :class="day(service,key).state" :aria-label="service.name + ' ' + describe(service, key)"
               @mouseenter="showHint($event, describe(service,key))" @mouseleave="hideHint" @focus="showHint($event, describe(service,key))" @blur="hideHint" @click="openDay(key)"></button>
