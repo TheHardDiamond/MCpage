@@ -21,7 +21,9 @@ const month = ref('')
 const months = computed(() => [...new Set(byDate.filter(item => !year.value || item.date.startsWith(year.value)).map(item => item.date.slice(0, 7)))])
 const cards = computed(() => byDate.filter(item => item.date.startsWith(month.value || year.value)))
 const offset = ref(0)
-const period = computed(() => cutoff ? Array.from({ length: 90 }, (_, i) => date(days(cutoff) - (offset.value * 90 + 89 - i) * DAY)) : [])
+const httpHistory = ref({})
+const latestDay = computed(() => [cutoff, ...Object.values(httpHistory.value).flatMap(rows => Object.keys(rows))].sort().at(-1))
+const period = computed(() => latestDay.value ? Array.from({ length: 90 }, (_, i) => date(days(latestDay.value) - (offset.value * 90 + 89 - i) * DAY)) : [])
 const calendarMonth = ref(cutoff.slice(0, 7))
 const jumpYear = ref(calendarMonth.value.slice(0, 4))
 const jumpMonth = ref(calendarMonth.value.slice(5))
@@ -87,7 +89,20 @@ function openLinkedStory() {
   const story = document.getElementById(hash.slice(1))
   if (story) story.open = true
 }
-function day(service, key) { return service.days[key] || { state: 'unknown', events: [] } }
+function day(service, key) {
+  const counts = httpHistory.value[service.id.replace(/^csu-mc-/, '')]?.[key]
+  const archived = service.days[key]
+  if (!counts) return archived || { state: 'unknown', events: [] }
+  return {
+    state: counts.failed ? 'degraded' : 'ok',
+    events: archived?.events ?? [],
+    counts,
+  }
+}
+function hasIncident(service, key) {
+  const row = day(service, key)
+  return row.events.length > 0 || Boolean(row.counts?.failed)
+}
 function calendarLabel(key) {
   return [key, ...archive.services.flatMap(service => [
     service.name + '：' + labels[day(service, key).state],
@@ -127,7 +142,14 @@ async function load() {
     if (!response.ok) throw new Error()
     const snapshot = await response.json()
     for (const server of (config.mcApi ? snapshot : snapshot.servers)) merge(server)
-    if (!config.mcApi) skinChecks.value = snapshot.http
+    if (!config.mcApi) {
+      skinChecks.value = snapshot.http
+      const previousMonth = latestDay.value.slice(0, 7)
+      httpHistory.value = snapshot.httpHistory ?? {}
+      if (calendarMonth.value === previousMonth && offset.value === 0) {
+        setCalendarMonth(latestDay.value.slice(0, 7))
+      }
+    }
     apiError.value = false
   } catch { apiError.value = true }
 }
@@ -287,7 +309,7 @@ onUnmounted(() => {
         <div class="calendar">
           <span v-for="weekday in '日一二三四五六'" :key="weekday">{{ weekday }}</span>
           <template v-for="key in calendar" :key="key">
-            <button v-if="key.startsWith(calendarMonth)" :aria-label="calendarLabel(key)" :class="{ incident: archive.services.some(service => day(service,key).events.length) }"
+            <button v-if="key.startsWith(calendarMonth)" :aria-label="calendarLabel(key)" :class="{ incident: archive.services.some(service => hasIncident(service,key)) }"
               @mouseenter="showHint($event, calendarLabel(key))" @mouseleave="hideHint" @focus="showHint($event, calendarLabel(key))" @blur="hideHint" @click="openDay(key)">
               {{ Number(key.slice(-2)) }}
             </button>
